@@ -1,10 +1,14 @@
+//随机生成1到100之间的数字
+//玩家按1进入游戏
+//可重复猜
+//猜大猜小会有提示
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <time.h>
 void caidan()
 {
-	printf("1 ��ʼ��Ϸ\n");
-	printf("0 �˳���Ϸ\n");
+	printf("1 开始游戏\n");
+	printf("0 退出游戏\n");
 }
 void game()
 {
@@ -16,11 +20,11 @@ void game()
 		scanf("%d", &guess);
 		if (guess < ret)
 		{
-			printf("��С��");
+			printf("猜小了");
 		}
 		else if (guess > ret)
 		{
-			printf("�´���");
+			printf("猜大了");
 		}
 		else
 		{
@@ -43,14 +47,14 @@ int main()
 		switch (a)
 		{
 		case 1:
-			printf("�������\n");
+			printf("请猜数字\n");
 			game();
 			break;
 		case 0:
-			printf("�˳���Ϸ");
+			printf("退出游戏");
 			break;
 		default:
-			printf("û�д�ѡ��");
+			printf("没有此选项");
 			break;
 		}
 	} while (a);
